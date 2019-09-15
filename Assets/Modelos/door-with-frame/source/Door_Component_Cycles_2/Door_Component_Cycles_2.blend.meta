@@ -2,7 +2,19 @@ fileFormatVersion: 2
 guid: 8855de7f1a645de44aae7533b59de820
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -4362516368828170102
+    second: Plane.001|Circle.001Action
+  - first:
+      74: -1438433368569988972
+    second: Plane.001|Door
+  - first:
+      74: 8971653179785726973
+    second: Circle.001|Circle.001Action
+  - first:
+      74: 2384676319834995211
+    second: Circle.001|Door
   externalObjects: {}
   materials:
     importMaterials: 1
