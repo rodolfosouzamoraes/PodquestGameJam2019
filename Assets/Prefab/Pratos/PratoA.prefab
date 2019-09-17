@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4246744964014284731}
   - component: {fileID: 4218160860348190579}
   - component: {fileID: 4228077522815676741}
+  - component: {fileID: 1401757540}
   m_Layer: 0
   m_Name: PratoA
   m_TagString: Untagged
@@ -80,6 +81,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1401757540
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250557137470060879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: f6c0da0ba5de33b4b9547f2cca90a5fd, type: 3}
+--- !u!136 &2005483012
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251098862008303618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1294813210016957178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,7 +119,7 @@ PrefabInstance:
     - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
       propertyPath: m_Name
-      value: Ovo
+      value: PosiEgg
       objectReference: {fileID: 0}
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
@@ -147,8 +176,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3842393736674075447, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}
+--- !u!1 &4251098862008303618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
+    type: 3}
+  m_PrefabInstance: {fileID: 1294813210016957178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4251098862008303621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
@@ -165,7 +201,7 @@ PrefabInstance:
     - target: {fileID: 4690574510832099081, guid: b93c69abc56cba94a8d46d1f7f60e366,
         type: 3}
       propertyPath: m_Name
-      value: Hamburger
+      value: PosiHamburger
       objectReference: {fileID: 0}
     - target: {fileID: 4690574510832099080, guid: b93c69abc56cba94a8d46d1f7f60e366,
         type: 3}

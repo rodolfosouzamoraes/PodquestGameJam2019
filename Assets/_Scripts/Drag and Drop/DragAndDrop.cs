@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
+    [SerializeField] GameObject colliderOfFoodOnPlate;
     Vector3 dist;
     Vector3 startPos;
     Rigidbody rb;
@@ -13,16 +14,19 @@ public class DragAndDrop : MonoBehaviour
     float posZ;
     float posY;
     bool isDragging = false;
+    bool isCollided = false;
 
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
         soundHit = GetComponents<AudioSource>();
         rb = GetComponent<Rigidbody>();
+        colliderOfFoodOnPlate.SetActive(false);
     }
 
     private void OnMouseUp()
     {
+        colliderOfFoodOnPlate.SetActive(true);
         rb.useGravity = true;
         isDragging = false;
     }
@@ -37,6 +41,7 @@ public class DragAndDrop : MonoBehaviour
         posY = Input.mousePosition.y - dist.y;
         posZ = Input.mousePosition.z - dist.z;
         soundHit[0].Play();
+        colliderOfFoodOnPlate.SetActive(false);
     }
 
     void OnMouseDrag()
@@ -53,16 +58,21 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        string objectTag = other.gameObject.tag;
-        switch (gameObject.tag)
+        if (!isCollided)
         {
-            case "Hamburger":
-                CheckTarget(objectTag, "PosiHamburger");
-                break;
-            case "Egg":
-                CheckTarget(objectTag, "PosiEgg");
-                break;
+            isCollided = true;
+            string objectTag = other.gameObject.tag;
+            switch (gameObject.tag)
+            {
+                case "Hamburger":
+                    CheckTarget(objectTag, "PosiHamburger");
+                    break;
+                case "Egg":
+                    CheckTarget(objectTag, "PosiEgg");
+                    break;
+            }
         }
+        
     }
 
     private void CheckTarget(string objectTag, string posiFood)
@@ -72,6 +82,7 @@ public class DragAndDrop : MonoBehaviour
         if (objectTag.Equals(posiFood))
         {
             soundHit[1].Play();
+            colliderOfFoodOnPlate.SetActive(false);
             Debug.Log("Acertou!");
         }
         else

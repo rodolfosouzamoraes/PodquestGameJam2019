@@ -1006,6 +1006,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7312077368732362610, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312077368732362615, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: positionOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 2392670248348437524}
+    - target: {fileID: 7312077368732362615, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 2392670248348437524}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c8997a3e243644db01985075d4c195, type: 3}
 --- !u!4 &142732162 stripped
@@ -1775,6 +1790,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7312077368732362610, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312077368732362615, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: positionOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 2392670248348437524}
+    - target: {fileID: 7312077368732362615, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 2392670248348437524}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c8997a3e243644db01985075d4c195, type: 3}
 --- !u!4 &443307071 stripped
@@ -2739,6 +2769,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7936031412012933572, guid: 7ff8da265c5a5264ea481763b9d2d69b,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936031412012933574, guid: 7ff8da265c5a5264ea481763b9d2d69b,
+        type: 3}
+      propertyPath: positionOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 859721081}
+    - target: {fileID: 7936031412012933574, guid: 7ff8da265c5a5264ea481763b9d2d69b,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 859721081}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ff8da265c5a5264ea481763b9d2d69b, type: 3}
 --- !u!4 &851600161 stripped
@@ -2746,6 +2791,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7938798827884126688, guid: 7ff8da265c5a5264ea481763b9d2d69b,
     type: 3}
   m_PrefabInstance: {fileID: 851600160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &859721081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2002579069197910361, guid: 1703b7fd32f3b86439786cc2c922f369,
+    type: 3}
+  m_PrefabInstance: {fileID: 2392670248348437523}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &883694258
 GameObject:
@@ -2963,7 +3014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1826651974}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &947563845
 Light:
@@ -5284,9 +5335,9 @@ Transform:
   m_Children:
   - {fileID: 497273035}
   - {fileID: 390281678}
+  - {fileID: 947563844}
   - {fileID: 70856530}
   - {fileID: 1139723013}
-  - {fileID: 947563844}
   m_Father: {fileID: 1552466231}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5325,6 +5376,12 @@ Transform:
   m_Father: {fileID: 1552466231}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1855734718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4251098862393490879, guid: d15ce9b2d48772a4cbbf0bc60f3dd203,
+    type: 3}
+  m_PrefabInstance: {fileID: 4251098861631421953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1881571026
 GameObject:
   m_ObjectHideFlags: 0
@@ -6224,6 +6281,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1981458472}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2005483011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4251098862008303618, guid: d15ce9b2d48772a4cbbf0bc60f3dd203,
+    type: 3}
+  m_PrefabInstance: {fileID: 4251098861631421953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2068222673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6544,8 +6607,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2002579069618224282, guid: 1703b7fd32f3b86439786cc2c922f369,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002579069197910367, guid: 1703b7fd32f3b86439786cc2c922f369,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175101187208367348, guid: 1703b7fd32f3b86439786cc2c922f369,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.273
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175101187208367243, guid: 1703b7fd32f3b86439786cc2c922f369,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1703b7fd32f3b86439786cc2c922f369, type: 3}
+--- !u!1 &2392670248348437524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4581958732439198393, guid: 1703b7fd32f3b86439786cc2c922f369,
+    type: 3}
+  m_PrefabInstance: {fileID: 2392670248348437523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3950252361856679632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 740491702930476659, guid: aa97319618b015449897e8c6535b0a37,
@@ -6624,16 +6713,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251098862393490879, guid: d15ce9b2d48772a4cbbf0bc60f3dd203,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiHamburger
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251098862008303618, guid: d15ce9b2d48772a4cbbf0bc60f3dd203,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiEgg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15ce9b2d48772a4cbbf0bc60f3dd203, type: 3}
@@ -6779,6 +6858,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7312077368732362610, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312077368732362615, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: positionOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 1855734718}
+    - target: {fileID: 7312077368732362615, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 1855734718}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c8997a3e243644db01985075d4c195, type: 3}
 --- !u!1001 &7936031411952538326
@@ -6848,6 +6942,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7936031412012933572, guid: 7ff8da265c5a5264ea481763b9d2d69b,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936031412012933574, guid: 7ff8da265c5a5264ea481763b9d2d69b,
+        type: 3}
+      propertyPath: positionOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 2005483011}
+    - target: {fileID: 7936031412012933574, guid: 7ff8da265c5a5264ea481763b9d2d69b,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 2005483011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ff8da265c5a5264ea481763b9d2d69b, type: 3}
 --- !u!1001 &8334097299558242077

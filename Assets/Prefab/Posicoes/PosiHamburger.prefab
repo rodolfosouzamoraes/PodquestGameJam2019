@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4690574510832099080}
-  - component: {fileID: 4690574510832099191}
+  - component: {fileID: 2838653017778023094}
   m_Layer: 0
-  m_Name: Hamburger
+  m_Name: PosiHamburger
   m_TagString: PosiHamburger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,8 +31,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4690574510832099191
-SphereCollider:
+--- !u!136 &2838653017778023094
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -41,6 +41,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.21
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
