@@ -8,6 +8,7 @@ public class DragAndDrop : MonoBehaviour
     Vector3 startPos;
     Rigidbody rb;
     AudioSource[] soundHit; // Array para diversos sons que possa acontecer com o objeto
+    GameManager gm;
     float posX;
     float posZ;
     float posY;
@@ -15,6 +16,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         soundHit = GetComponents<AudioSource>();
         rb = GetComponent<Rigidbody>();
     }
@@ -66,6 +68,7 @@ public class DragAndDrop : MonoBehaviour
     private void CheckTarget(string objectTag, string posiFood)
     {
         Destroy(GetComponent<DragAndDrop>()); // vai destruir o Script para não correr o risco do jogador pega-lo novamente
+        gm.AddTotalHitPerStage();
         if (objectTag.Equals(posiFood))
         {
             soundHit[1].Play();
