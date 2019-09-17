@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Food
+  - PosiHamburger
+  - PosiEgg
+  - Hamburger
+  - Egg
   layers:
   - Default
   - TransparentFX
