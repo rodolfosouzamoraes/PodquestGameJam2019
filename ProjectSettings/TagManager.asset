@@ -9,6 +9,18 @@ TagManager:
   - PosiEgg
   - Hamburger
   - Egg
+  - Lettude
+  - PosiLettude
+  - Steak
+  - PosiSteak
+  - Chicken
+  - PosiChicken
+  - Maki
+  - PosiMaki
+  - Tempura
+  - PosiTempura
+  - Sushi
+  - PosiSushi
   layers:
   - Default
   - TransparentFX

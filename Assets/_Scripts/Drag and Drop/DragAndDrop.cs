@@ -62,20 +62,39 @@ public class DragAndDrop : MonoBehaviour
         {
             isCollided = true;
             string objectTag = other.gameObject.tag;
+            GameObject go = other.gameObject;
             switch (gameObject.tag)
             {
                 case "Hamburger":
-                    CheckTarget(objectTag, "PosiHamburger");
+                    CheckTarget(objectTag, "PosiHamburger", go);
                     break;
                 case "Egg":
-                    CheckTarget(objectTag, "PosiEgg");
+                    CheckTarget(objectTag, "PosiEgg", go);
+                    break;
+                case "Lettude":
+                    CheckTarget(objectTag, "PosiLettude", go);
+                    break;
+                case "Steak":
+                    CheckTarget(objectTag, "PosiSteak", go);
+                    break;
+                case "Chicken":
+                    CheckTarget(objectTag, "PosiChicken", go);
+                    break;
+                case "Maki":
+                    CheckTarget(objectTag, "PosiMaki", go);
+                    break;
+                case "Tempura":
+                    CheckTarget(objectTag, "PosiTempura", go);
+                    break;
+                case "Sushi":
+                    CheckTarget(objectTag, "PosiSushi", go);
                     break;
             }
         }
         
     }
 
-    private void CheckTarget(string objectTag, string posiFood)
+    private void CheckTarget(string objectTag, string posiFood, GameObject go)
     {
         Destroy(GetComponent<DragAndDrop>()); // vai destruir o Script para não correr o risco do jogador pega-lo novamente
         gm.AddTotalHitPerStage();
@@ -83,6 +102,7 @@ public class DragAndDrop : MonoBehaviour
         {
             soundHit[1].Play();
             colliderOfFoodOnPlate.SetActive(false);
+            Destroy(go);
             Debug.Log("Acertou!");
         }
         else
