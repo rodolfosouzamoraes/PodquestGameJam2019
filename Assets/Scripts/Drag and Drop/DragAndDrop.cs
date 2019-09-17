@@ -7,6 +7,7 @@ public class DragAndDrop : MonoBehaviour
     Vector3 dist;
     Vector3 startPos;
     Rigidbody rb;
+    AudioSource soundHit;
     float posX;
     float posZ;
     float posY;
@@ -16,11 +17,14 @@ public class DragAndDrop : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         isDragging = true;
+        soundHit = GetComponent<AudioSource>();
     }
     private void OnMouseUp()
     {
         rb.useGravity = true;
         isDragging = false;
+
+        soundHit.enabled = false;
     }
     void OnMouseDown()
     {
@@ -29,6 +33,8 @@ public class DragAndDrop : MonoBehaviour
         posX = Input.mousePosition.x - dist.x;
         posY = Input.mousePosition.y - dist.y;
         posZ = Input.mousePosition.z - dist.z;
+
+        soundHit.Play();
     }
 
     void OnMouseDrag()
