@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] stages; // todos os Estagios/Fases
     [SerializeField] int[] totalFoodPerPlate; // Posicao 0 = PratoA, 1 = PratoB ...
     [SerializeField] int[] totalHitPerStage;
+    [SerializeField] ParticleSystem particleSystem;
     void Start()
     {
         foreach(GameObject go in stages)
@@ -27,8 +28,10 @@ public class GameManager : MonoBehaviour
             if (go.activeSelf) // verifica qual estagio está ativo.
             {
                 totalHitPerStage[posi]++;
-                if(totalHitPerStage[posi] == totalFoodPerPlate[posi])
+                particleSystem.Play();
+                if (totalHitPerStage[posi] == totalFoodPerPlate[posi])
                 {
+                    particleSystem.Play();
                     Debug.Log("Estagio Completado!");
                     Invoke("NextStage",2f);
                 }
