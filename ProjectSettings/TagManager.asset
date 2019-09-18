@@ -24,6 +24,7 @@ TagManager:
   - Prato
   - Mesa
   - Tabua
+  - Seta
   layers:
   - Default
   - TransparentFX

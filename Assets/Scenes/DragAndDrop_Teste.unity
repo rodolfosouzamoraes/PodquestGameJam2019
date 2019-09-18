@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd32da284ccc946488833fde8eeeacad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderOfFoodOnPlate: {fileID: 0}
 --- !u!135 &1093208675
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -501,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd32da284ccc946488833fde8eeeacad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderOfFoodOnPlate: {fileID: 0}
 --- !u!135 &1736907861
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -617,6 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd32da284ccc946488833fde8eeeacad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderOfFoodOnPlate: {fileID: 0}
 --- !u!135 &1857892980
 SphereCollider:
   m_ObjectHideFlags: 0

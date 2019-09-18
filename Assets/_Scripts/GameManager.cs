@@ -15,10 +15,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] ParticleSystem particleSystem;
     [HideInInspector]
     //public int foodDropped = 0; // não preciso mais contar se o alimento caiu no prato, apenas se ele acertou ou não.
+    GameObject arrow;
     bool restart = false;
     float hitMargin = 0.75f; // margem de acerto
     void Start()
     {
+        arrow = GameObject.FindGameObjectWithTag("Seta");
+        DisableArrow();
         StartStages();
     }
 
@@ -141,5 +144,15 @@ public class GameManager : MonoBehaviour
             animatorCamera.SetBool("PositionCamera", false);
             canvasUI.SetActive(true);
         }
+    }
+
+    public void ActiveArrow(GameObject target)
+    {
+        arrow.GetComponent<Arrow>().SetTarget(target);
+        arrow.SetActive(true);
+    }
+    public void DisableArrow()
+    {
+        arrow.SetActive(false);
     }
 }

@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd32da284ccc946488833fde8eeeacad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderOfFoodOnPlate: {fileID: 0}
 --- !u!64 &860742326
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -26,14 +26,17 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseUp()
     {
+        gm.DisableArrow();
         colliderOfFoodOnPlate.SetActive(true);
         rb.useGravity = true;
         isDragging = false; // Quando o jogador solta o mouse, ele não consegue mais arrastar
     }
     void OnMouseDown()
-    {   
-        if(isDragging)
+    {
+        
+        if (isDragging)
         {
+            gm.ActiveArrow(gameObject);
             rb.useGravity = false;
             //isDragging = true;
             transform.position = new Vector3(transform.position.x, transform.position.y + 4.5f, transform.position.z);
@@ -67,7 +70,7 @@ public class DragAndDrop : MonoBehaviour
         }
         else if (collision.gameObject.tag.Equals("Tabua"))
         {
-            isDragging = true;
+            isDragging = true; // Deixa o jogador pegar o objeto novamente
         }
     }
 
