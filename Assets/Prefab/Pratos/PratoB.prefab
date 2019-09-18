@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4250557137332024328}
   m_Layer: 0
   m_Name: PratoB
-  m_TagString: Untagged
+  m_TagString: Prato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 4690574510832099080, guid: b93c69abc56cba94a8d46d1f7f60e366,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.19999999
+      value: -0.273
       objectReference: {fileID: 0}
     - target: {fileID: 4690574510832099080, guid: b93c69abc56cba94a8d46d1f7f60e366,
         type: 3}
@@ -194,16 +194,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4690574510832099191, guid: b93c69abc56cba94a8d46d1f7f60e366,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4690574510832099191, guid: b93c69abc56cba94a8d46d1f7f60e366,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.06
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93c69abc56cba94a8d46d1f7f60e366, type: 3}
 --- !u!4 &5175101187208367348 stripped
@@ -219,11 +209,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007199031851097824}
     m_Modifications:
-    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiEgg
-      objectReference: {fileID: 0}
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,15 +264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3100436033852523262, guid: 34ca60fd2b20acb48b2527f4a89c6581,
+    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
-      propertyPath: m_Center.x
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 3100436033852523262, guid: 34ca60fd2b20acb48b2527f4a89c6581,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.02
+      propertyPath: m_Name
+      value: PosiEgg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}
@@ -363,11 +343,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4690574510832099191, guid: b93c69abc56cba94a8d46d1f7f60e366,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93c69abc56cba94a8d46d1f7f60e366, type: 3}

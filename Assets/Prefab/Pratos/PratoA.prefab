@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1401757540}
   m_Layer: 0
   m_Name: PratoA
-  m_TagString: Untagged
+  m_TagString: Prato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,8 +176,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: PosiEgg
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3842393736674075447, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}
 --- !u!1 &4251098862008303618 stripped
 GameObject:
@@ -260,13 +259,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2838653017778023094, guid: b93c69abc56cba94a8d46d1f7f60e366,
         type: 3}
-      propertyPath: m_Center.y
-      value: 0.049999915
+      propertyPath: m_Height
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2838653017778023094, guid: b93c69abc56cba94a8d46d1f7f60e366,
         type: 3}
-      propertyPath: m_Height
-      value: 0.2
+      propertyPath: m_Center.y
+      value: 0.049999915
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93c69abc56cba94a8d46d1f7f60e366, type: 3}

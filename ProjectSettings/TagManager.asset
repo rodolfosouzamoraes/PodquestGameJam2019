@@ -21,6 +21,7 @@ TagManager:
   - PosiTempura
   - Sushi
   - PosiSushi
+  - Prato
   layers:
   - Default
   - TransparentFX

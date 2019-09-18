@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 635442812712144344}
   m_Layer: 0
   m_Name: PratoE
-  m_TagString: Untagged
+  m_TagString: Prato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,11 +224,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3620599242890235143}
     m_Modifications:
-    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiEgg
-      objectReference: {fileID: 0}
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,6 +278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiEgg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}

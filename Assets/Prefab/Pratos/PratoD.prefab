@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 5740740534321560862}
   m_Layer: 0
   m_Name: PratoD
-  m_TagString: Untagged
+  m_TagString: Prato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ PrefabInstance:
     - target: {fileID: 3015749953900845635, guid: 8e36aaf3d75182f47b6b84bde3e0c69e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.354
       objectReference: {fileID: 0}
     - target: {fileID: 3015749953900845635, guid: 8e36aaf3d75182f47b6b84bde3e0c69e,
         type: 3}
@@ -135,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 3015749953900845635, guid: 8e36aaf3d75182f47b6b84bde3e0c69e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.072
       objectReference: {fileID: 0}
     - target: {fileID: 3015749953900845635, guid: 8e36aaf3d75182f47b6b84bde3e0c69e,
         type: 3}
@@ -192,25 +192,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8449963543035461057}
     m_Modifications:
-    - target: {fileID: 3674527563158889997, guid: d42371078340aa14dac72f9c987bcd52,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiSteak
-      objectReference: {fileID: 0}
     - target: {fileID: 4133510219796249300, guid: d42371078340aa14dac72f9c987bcd52,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.093
       objectReference: {fileID: 0}
     - target: {fileID: 4133510219796249300, guid: d42371078340aa14dac72f9c987bcd52,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4133510219796249300, guid: d42371078340aa14dac72f9c987bcd52,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 4133510219796249300, guid: d42371078340aa14dac72f9c987bcd52,
         type: 3}
@@ -251,6 +246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674527563158889997, guid: d42371078340aa14dac72f9c987bcd52,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiSteak
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d42371078340aa14dac72f9c987bcd52, type: 3}
@@ -267,15 +267,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8449963543035461057}
     m_Modifications:
-    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiEgg
-      objectReference: {fileID: 0}
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07
+      value: 0.185
       objectReference: {fileID: 0}
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
@@ -285,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.28
+      value: 0.153
       objectReference: {fileID: 0}
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
@@ -326,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiEgg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}
