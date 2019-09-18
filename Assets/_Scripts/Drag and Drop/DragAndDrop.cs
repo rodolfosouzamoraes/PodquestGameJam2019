@@ -63,6 +63,8 @@ public class DragAndDrop : MonoBehaviour
     {
         if (!isCollided)
         {
+            gm.foodDropped++; // Jogador acabou de lançar comida no prato
+            Debug.Log(gm.foodDropped);
             isCollided = true;
             string objectTag = other.gameObject.tag;
             GameObject go = other.gameObject;
