@@ -8,20 +8,34 @@ public class GameManager : MonoBehaviour
     [SerializeField] Animator animatorCamera;
     [SerializeField] GameObject canvasUI;
     [SerializeField] GameObject[] stages; // todos os Estagios/Fases
+    [SerializeField] GameObject inGameStage;
+    [SerializeField] GameObject originalStage;
     [SerializeField] int[] totalFoodPerPlate; // Posicao 0 = PratoA, 1 = PratoB ...
     [SerializeField] int[] totalHitPerStage;
     [SerializeField] ParticleSystem particleSystem;
     [HideInInspector]
-    public int foodDropped = 0; //número de comidas que o jogador lançou no prato
+    //public int foodDropped = 0; // não preciso mais contar se o alimento caiu no prato, apenas se ele acertou ou não.
     bool restart = false;
+    float hitMargin = 0.75f; // margem de acerto
     void Start()
     {
-        foreach(GameObject go in stages)
+        StartStages();
+    }
+
+    private void StartStages()
+    {
+        foreach (GameObject go in stages)
         {
             go.SetActive(false);
         }
         stages[0].SetActive(true);
+
+        for (int x = 0; x< totalHitPerStage.Length; x++)
+        {
+            totalHitPerStage[x] = 0;
+        }
     }
+
 
     public void AddTotalHitPerStage()
     {
@@ -32,29 +46,52 @@ public class GameManager : MonoBehaviour
             {
                 totalHitPerStage[posi]++;
                 particleSystem.Play();
-                if (totalHitPerStage[posi] == totalFoodPerPlate[posi])
-                {
-                    Debug.Log("Estagio Completado!");
-                    Invoke("NextStage",2f);
-                }
-
-                //talvez tenha que colocar essa condição em um método específico
-                else if(totalHitPerStage[posi] != totalFoodPerPlate[posi] && foodDropped == totalFoodPerPlate[posi])
-                {
-                    //Se o jogador errou todas as tentativas de lançamento, reiniciar estágios
-                    go.SetActive(false);
-                    restart = true;
-                    Invoke("NextStage", 2f);
-                }
+                CheckStage(posi);
                 return;
             }
             posi++;
         }
     }
+    public void RestartStages() // reinicia estagios.
+    {
+        StartCoroutine(DelayRestart());
+    }
+
+    IEnumerator DelayRestart()
+    {
+        yield return new WaitForSeconds(2f);
+
+        foreach (GameObject stage in stages) // Destroi todos os stagios do jogo
+        {
+            Destroy(stage);
+        }
+
+        GameObject go = Instantiate(originalStage); // instancia um novo objeto Estagios com todos os estagios
+        go.transform.position = inGameStage.transform.position; // coloca na posição do Estagios atual;
+        Destroy(inGameStage); //Limpa a variavel para armazenar o novo Estagios
+
+        inGameStage = go;
+        int totalStage = inGameStage.transform.childCount; // conta quantos estagios tem dentro do Estagios
+        for (int x = 0; x < totalStage; x++)
+        {
+            stages[x] = inGameStage.transform.GetChild(x).gameObject;
+        }
+
+        StartStages();
+    }
+
+    private void CheckStage(int posi)
+    {
+        if (totalHitPerStage[posi] == totalFoodPerPlate[posi]) // verifica se todos os alimentos foram jogados
+        {
+            Debug.Log("Estagio Completado!");
+            Invoke("NextStage", 2f);
+        }
+    }
 
     void NextStage()
     {
-        foodDropped = 0;
+        //foodDropped = 0;
         int posi = 0;
         int nextPosi = 0;
         int totalStages = stages.Length;

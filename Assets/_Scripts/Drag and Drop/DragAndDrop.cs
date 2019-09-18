@@ -59,40 +59,51 @@ public class DragAndDrop : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Mesa") && !isCollided)
+        {
+            WrongTarget();
+        }
+        else if (collision.gameObject.tag.Equals("Tabua"))
+        {
+            isDragging = true;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!isCollided)
         {
-            gm.foodDropped++; // Jogador acabou de lançar comida no prato
-            Debug.Log(gm.foodDropped);
+            //gm.foodDropped++;
+            //Debug.Log(gm.foodDropped);
             isCollided = true;
-            string objectTag = other.gameObject.tag;
             GameObject go = other.gameObject;
             switch (gameObject.tag)
             {
                 case "Hamburger":
-                    CheckTarget(objectTag, "PosiHamburger", go);
+                    CheckTarget(go.tag, "PosiHamburger", go);
                     break;
                 case "Egg":
-                    CheckTarget(objectTag, "PosiEgg", go);
+                    CheckTarget(go.tag, "PosiEgg", go);
                     break;
                 case "Lettude":
-                    CheckTarget(objectTag, "PosiLettude", go);
+                    CheckTarget(go.tag, "PosiLettude", go);
                     break;
                 case "Steak":
-                    CheckTarget(objectTag, "PosiSteak", go);
+                    CheckTarget(go.tag, "PosiSteak", go);
                     break;
                 case "Chicken":
-                    CheckTarget(objectTag, "PosiChicken", go);
+                    CheckTarget(go.tag, "PosiChicken", go);
                     break;
                 case "Maki":
-                    CheckTarget(objectTag, "PosiMaki", go);
+                    CheckTarget(go.tag, "PosiMaki", go);
                     break;
                 case "Tempura":
-                    CheckTarget(objectTag, "PosiTempura", go);
+                    CheckTarget(go.tag, "PosiTempura", go);
                     break;
                 case "Sushi":
-                    CheckTarget(objectTag, "PosiSushi", go);
+                    CheckTarget(go.tag, "PosiSushi", go);
                     break;
             }
         }
@@ -102,7 +113,6 @@ public class DragAndDrop : MonoBehaviour
     private void CheckTarget(string objectTag, string posiFood, GameObject go)
     {
         Destroy(GetComponent<DragAndDrop>()); // vai destruir o Script para não correr o risco do jogador pega-lo novamente
-        //gm.AddTotalHitPerStage(); // Pelo que eu entendi aqui, mesmo o jogador errando o alvo, a pontuação contabiliza, então comentei pra testar e agora contabiliza certo
         if (objectTag.Equals(posiFood))
         {
             gm.AddTotalHitPerStage();
@@ -113,8 +123,24 @@ public class DragAndDrop : MonoBehaviour
         }
         else
         {
-            soundHit[2].Play();
-            Debug.Log("Errou!");
+            WrongTarget();
+        }
+    }
+
+    void WrongTarget()
+    {
+        DropDragAndDrop(); // não permite que o jogador pegue o aliemento para não correr o risco dele pegar um alimento diferente depois que errar o anterior.
+        soundHit[2].Play();
+        Debug.Log("Errou!");
+        gm.RestartStages();
+    }
+
+    private static void DropDragAndDrop()
+    {
+        DragAndDrop[] dragAndDrop = FindObjectsOfType<DragAndDrop>();
+        foreach (DragAndDrop dd in dragAndDrop)
+        {
+            Destroy(dd);
         }
     }
 }

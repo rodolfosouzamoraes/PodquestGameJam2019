@@ -22,6 +22,8 @@ TagManager:
   - Sushi
   - PosiSushi
   - Prato
+  - Mesa
+  - Tabua
   layers:
   - Default
   - TransparentFX
