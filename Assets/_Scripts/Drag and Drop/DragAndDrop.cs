@@ -13,7 +13,7 @@ public class DragAndDrop : MonoBehaviour
     float posX;
     float posZ;
     float posY;
-    bool isDragging = false;
+    bool isDragging = true; //Jogo começa com o jogador conseguindo arrastar e solta
     bool isCollided = false;
 
     private void Start()
@@ -28,20 +28,23 @@ public class DragAndDrop : MonoBehaviour
     {
         colliderOfFoodOnPlate.SetActive(true);
         rb.useGravity = true;
-        isDragging = false;
+        isDragging = false; // Quando o jogador solta o mouse, ele não consegue mais arrastar
     }
     void OnMouseDown()
-    {
-        rb.useGravity = false;
-        isDragging = true;
-        transform.position = new Vector3(transform.position.x, transform.position.y + 4.5f, transform.position.z);
-        startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        dist = Camera.main.WorldToScreenPoint(transform.position);
-        posX = Input.mousePosition.x - dist.x;
-        posY = Input.mousePosition.y - dist.y;
-        posZ = Input.mousePosition.z - dist.z;
-        soundHit[0].Play();
-        colliderOfFoodOnPlate.SetActive(false);
+    {   
+        if(isDragging)
+        {
+            rb.useGravity = false;
+            //isDragging = true;
+            transform.position = new Vector3(transform.position.x, transform.position.y + 4.5f, transform.position.z);
+            startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            dist = Camera.main.WorldToScreenPoint(transform.position);
+            posX = Input.mousePosition.x - dist.x;
+            posY = Input.mousePosition.y - dist.y;
+            posZ = Input.mousePosition.z - dist.z;
+            soundHit[0].Play();
+            colliderOfFoodOnPlate.SetActive(false);
+        }
     }
 
     void OnMouseDrag()
@@ -97,9 +100,10 @@ public class DragAndDrop : MonoBehaviour
     private void CheckTarget(string objectTag, string posiFood, GameObject go)
     {
         Destroy(GetComponent<DragAndDrop>()); // vai destruir o Script para não correr o risco do jogador pega-lo novamente
-        gm.AddTotalHitPerStage();
+        //gm.AddTotalHitPerStage(); // Pelo que eu entendi aqui, mesmo o jogador errando o alvo, a pontuação contabiliza, então comentei pra testar e agora contabiliza certo
         if (objectTag.Equals(posiFood))
         {
+            gm.AddTotalHitPerStage();
             soundHit[1].Play();
             colliderOfFoodOnPlate.SetActive(false);
             Destroy(go);
