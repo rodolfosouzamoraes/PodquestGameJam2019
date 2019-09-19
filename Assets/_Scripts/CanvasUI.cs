@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class CanvasUI : MonoBehaviour
 {
+    [SerializeField] GameObject canvasManual;
+    [SerializeField] GameObject canvasCredits;
+    [SerializeField] GameObject canvasSettings;
 
+    private void Start()
+    {
+        canvasSettings.SetActive(false);
+    }
     public void SelectButton(Animator animator)
     {
         animator.SetBool("Selected", true);
@@ -31,7 +38,14 @@ public class CanvasUI : MonoBehaviour
 
     }
 
-    public void Sair()
+    public void Settings()
+    {
+        gameObject.SetActive(false);
+        canvasSettings.SetActive(true);
+        canvasSettings.GetComponent<CanvasSettings>().SetSlider();
+    }
+
+    public void Exit()
     {
         Application.Quit();
     }

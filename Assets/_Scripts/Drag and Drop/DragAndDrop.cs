@@ -8,7 +8,6 @@ public class DragAndDrop : MonoBehaviour
     Vector3 dist;
     Vector3 startPos;
     Rigidbody rb;
-    AudioSource[] soundHit; // Array para diversos sons que possa acontecer com o objeto
     GameManager gm;
     float posX;
     float posZ;
@@ -19,7 +18,6 @@ public class DragAndDrop : MonoBehaviour
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
-        soundHit = GetComponents<AudioSource>();
         rb = GetComponent<Rigidbody>();
         colliderOfFoodOnPlate.SetActive(false);
     }
@@ -45,7 +43,7 @@ public class DragAndDrop : MonoBehaviour
             posX = Input.mousePosition.x - dist.x;
             posY = Input.mousePosition.y - dist.y;
             posZ = Input.mousePosition.z - dist.z;
-            soundHit[0].Play();
+            gm.PlaySoundEffect(1);
             colliderOfFoodOnPlate.SetActive(false);
         }
     }
@@ -119,7 +117,7 @@ public class DragAndDrop : MonoBehaviour
         if (objectTag.Equals(posiFood))
         {
             gm.AddTotalHitPerStage();
-            soundHit[1].Play();
+            gm.PlaySoundEffect(2);
             colliderOfFoodOnPlate.SetActive(false);
             Destroy(go);
             Debug.Log("Acertou!");
@@ -133,7 +131,7 @@ public class DragAndDrop : MonoBehaviour
     void WrongTarget()
     {
         DropDragAndDrop(); // não permite que o jogador pegue o aliemento para não correr o risco dele pegar um alimento diferente depois que errar o anterior.
-        soundHit[2].Play();
+        gm.PlaySoundEffect(3);
         Debug.Log("Errou!");
         gm.RestartStages();
     }

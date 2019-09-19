@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] int[] totalFoodPerPlate; // Posicao 0 = PratoA, 1 = PratoB ...
     [SerializeField] int[] totalHitPerStage;
     [SerializeField] ParticleSystem particleSystem;
-    [HideInInspector]
+    AudioSource[] audioSource;
+    //[HideInInspector]
     //public int foodDropped = 0; // não preciso mais contar se o alimento caiu no prato, apenas se ele acertou ou não.
     GameObject arrow;
     bool restart = false;
@@ -21,8 +22,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         arrow = GameObject.FindGameObjectWithTag("Seta");
+        audioSource = GetComponents<AudioSource>();
         DisableArrow();
         StartStages();
+        StartGameVolume();
     }
 
     private void StartStages()
@@ -142,7 +145,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             animatorCamera.SetBool("PositionCamera", false);
-            canvasUI.SetActive(true);
+            ActiveCanvasUI();
         }
     }
 
@@ -154,5 +157,39 @@ public class GameManager : MonoBehaviour
     public void DisableArrow()
     {
         arrow.SetActive(false);
+    }
+
+    public void SetGameVolume()
+    {
+        audioSource[0].volume = PlayerPrefs.GetFloat("VolumeMusic");
+        audioSource[1].volume = PlayerPrefs.GetFloat("VolumeEffects");
+        audioSource[2].volume = PlayerPrefs.GetFloat("VolumeEffects");
+        audioSource[3].volume = PlayerPrefs.GetFloat("VolumeEffects");
+    }
+
+    public void ActiveCanvasUI()
+    {
+        canvasUI.SetActive(true);
+    }
+    
+    public void StartGameVolume()
+    {
+        float firstAccess = PlayerPrefs.GetFloat("FirstAccess");
+        if (firstAccess == 0)
+        {
+            PlayerPrefs.SetFloat("FirstAccess", 1);
+            PlayerPrefs.SetFloat("VolumeMusic", 0.5f);
+            PlayerPrefs.SetFloat("VolumeEffects", 0.5f);
+        }
+        audioSource[0].volume = PlayerPrefs.GetFloat("VolumeMusic");
+        audioSource[1].volume = PlayerPrefs.GetFloat("VolumeEffects");
+        audioSource[2].volume = PlayerPrefs.GetFloat("VolumeEffects");
+        audioSource[3].volume = PlayerPrefs.GetFloat("VolumeEffects");
+        audioSource[0].Play();
+    }
+
+    public void PlaySoundEffect(int i)
+    {
+        audioSource[i].Play();
     }
 }
