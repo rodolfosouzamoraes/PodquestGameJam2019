@@ -30,7 +30,8 @@ public class CanvasUI : MonoBehaviour
 
     public void Manual()
     {
-
+        gameObject.SetActive(false);
+        canvasManual.SetActive(true);
     }
 
     public void Credits()
