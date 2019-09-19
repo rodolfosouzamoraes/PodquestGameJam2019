@@ -35,7 +35,8 @@ public class CanvasUI : MonoBehaviour
 
     public void Credits()
     {
-
+        gameObject.SetActive(false);
+        canvasCredits.SetActive(true);
     }
 
     public void Settings()
