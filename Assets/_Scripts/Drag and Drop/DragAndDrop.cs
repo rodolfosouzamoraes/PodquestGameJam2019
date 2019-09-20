@@ -24,7 +24,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseUp()
     {
-        gm.DisableArrow();
+        //gm.DisableArrow();
         colliderOfFoodOnPlate.SetActive(true);
         rb.useGravity = true;
         isDragging = false; // Quando o jogador solta o mouse, ele não consegue mais arrastar
@@ -34,9 +34,8 @@ public class DragAndDrop : MonoBehaviour
         
         if (isDragging)
         {
-            gm.ActiveArrow(gameObject);
+            //gm.ActiveArrow(gameObject);
             rb.useGravity = false;
-            //isDragging = true;
             transform.position = new Vector3(transform.position.x, transform.position.y + 4.5f, transform.position.z);
             startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             dist = Camera.main.WorldToScreenPoint(transform.position);

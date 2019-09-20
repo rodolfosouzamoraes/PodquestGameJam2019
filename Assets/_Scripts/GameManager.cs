@@ -17,17 +17,17 @@ public class GameManager : MonoBehaviour
     Timer timer;
     //[HideInInspector]
     //public int foodDropped = 0; // não preciso mais contar se o alimento caiu no prato, apenas se ele acertou ou não.
-    GameObject arrow;
+    //GameObject arrow;
     bool restart = false;
     float hitMargin = 0.75f; // margem de acerto
     bool isActive;
     void Start()
     {
         timer = FindObjectOfType<Timer>();
-        arrow = GameObject.FindGameObjectWithTag("Seta");
+        //arrow = GameObject.FindGameObjectWithTag("Seta");
         audioSource = GetComponents<AudioSource>();
         isActive = true;
-        DisableArrow();
+        //DisableArrow();
         StartStages();
         StartGameVolume();
     }
@@ -185,15 +185,15 @@ public class GameManager : MonoBehaviour
         ActiveCanvasUI();
     }
 
-    public void ActiveArrow(GameObject target)
-    {
-        arrow.GetComponent<Arrow>().SetTarget(target);
-        arrow.SetActive(true);
-    }
-    public void DisableArrow()
-    {
-        arrow.SetActive(false);
-    }
+    //public void ActiveArrow(GameObject target)
+    //{
+    //    arrow.GetComponent<Arrow>().SetTarget(target);
+    //    arrow.SetActive(true);
+    //}
+    //public void DisableArrow()
+    //{
+    //    arrow.SetActive(false);
+    //}
 
     public void SetGameVolume()
     {
