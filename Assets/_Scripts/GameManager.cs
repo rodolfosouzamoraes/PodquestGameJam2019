@@ -14,15 +14,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] int[] totalHitPerStage;
     [SerializeField] ParticleSystem particleSystem;
     AudioSource[] audioSource;
+    Timer timer;
     //[HideInInspector]
     //public int foodDropped = 0; // não preciso mais contar se o alimento caiu no prato, apenas se ele acertou ou não.
     GameObject arrow;
     bool restart = false;
     float hitMargin = 0.75f; // margem de acerto
+    bool isActive;
     void Start()
     {
+        timer = FindObjectOfType<Timer>();
         arrow = GameObject.FindGameObjectWithTag("Seta");
         audioSource = GetComponents<AudioSource>();
+        isActive = true;
         DisableArrow();
         StartStages();
         StartGameVolume();
@@ -60,13 +64,19 @@ public class GameManager : MonoBehaviour
     }
     public void RestartStages() // reinicia estagios.
     {
+        timer.PauseTimer();
+        PlaySoundEffect(3);
         StartCoroutine(DelayRestart());
     }
 
     IEnumerator DelayRestart()
     {
         yield return new WaitForSeconds(2f);
+        RestartGame();
+    }
 
+    private void RestartGame()
+    {
         foreach (GameObject stage in stages) // Destroi todos os stagios do jogo
         {
             Destroy(stage);
@@ -82,6 +92,8 @@ public class GameManager : MonoBehaviour
         {
             stages[x] = inGameStage.transform.GetChild(x).gameObject;
         }
+
+        timer.ResetTimer();
 
         StartStages();
     }
@@ -119,6 +131,10 @@ public class GameManager : MonoBehaviour
                     if (nextPosi + 1 > totalStages)
                     {
                         //Fim de Jogo
+                        //Audio de bater palmas
+                        isActive = false;
+                        PlaySoundEffect(4);
+                        StartCoroutine(Restart());
                         return;
                     }
                     else
@@ -134,19 +150,39 @@ public class GameManager : MonoBehaviour
         
     }
 
+    IEnumerator Restart()
+    {
+        yield return new WaitForSecondsRealtime(6.3f);
+        ReturnCavnasUI();
+        RestartGame();
+        isActive = true;
+
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        MainMenu();
+        if (isActive)
+        {
+            MainMenu();
+        }
+        
     }
 
     private void MainMenu()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            animatorCamera.SetBool("PositionCamera", false);
-            ActiveCanvasUI();
+            ReturnCavnasUI();
         }
+    }
+
+    private void ReturnCavnasUI()
+    {
+        timer.PauseTimer();
+        animatorCamera.SetBool("PositionCamera", false);
+        ActiveCanvasUI();
     }
 
     public void ActiveArrow(GameObject target)
@@ -191,5 +227,16 @@ public class GameManager : MonoBehaviour
     public void PlaySoundEffect(int i)
     {
         audioSource[i].Play();
+    }
+
+    public void StartTimer()
+    {
+        StartCoroutine(Timer());
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSecondsRealtime(4.3f);
+        timer.StartTimer();
     }
 }
