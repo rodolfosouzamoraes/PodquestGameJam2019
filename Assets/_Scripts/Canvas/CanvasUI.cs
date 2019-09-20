@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Rendering.PostProcessing;
 public class CanvasUI : MonoBehaviour
 {
     [SerializeField] GameObject canvasManual;
     [SerializeField] GameObject canvasCredits;
     [SerializeField] GameObject canvasSettings;
-
+    [SerializeField] GameObject posProcessingGo;
     GameManager gm;
+    private DepthOfField dofModel;
 
     private void Start()
     {
+        dofModel = FindObjectOfType<DepthOfField>();
         gm = FindObjectOfType<GameManager>();
         canvasSettings.SetActive(false);
         canvasCredits.SetActive(false);
@@ -29,6 +31,7 @@ public class CanvasUI : MonoBehaviour
 
     public void Play(Animator camAnimator)
     {
+        dofModel.focusDistance = new FloatParameter { value = 10f };
         camAnimator.SetBool("PositionCamera", true);
         gm.StartTimer();
         this.gameObject.SetActive(false);
