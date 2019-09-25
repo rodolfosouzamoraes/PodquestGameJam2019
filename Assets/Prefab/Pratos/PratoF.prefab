@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3337376698512674952}
   - component: {fileID: 3347426334241255102}
   - component: {fileID: 1502324965226840223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PratoF
   m_TagString: Prato
   m_Icon: {fileID: 0}

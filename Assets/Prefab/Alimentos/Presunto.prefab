@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8027503831631727335}
   - component: {fileID: 8491644346845661140}
   - component: {fileID: 2333519618846444899}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Presunto
   m_TagString: Steak
   m_Icon: {fileID: 0}

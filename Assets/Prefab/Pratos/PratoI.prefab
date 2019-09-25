@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 3279373253901560167}
   - component: {fileID: 3289422639172900689}
   - component: {fileID: 1660498321744574832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PratoI
   m_TagString: Prato
   m_Icon: {fileID: 0}
@@ -277,6 +277,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3110721339648347477}
     m_Modifications:
+    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiSushi
+      objectReference: {fileID: 0}
     - target: {fileID: 579146344274799330, guid: 0401f47560830ec46b777228e7066341,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -332,11 +337,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiSushi
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0401f47560830ec46b777228e7066341, type: 3}
 --- !u!4 &124497111265486147 stripped
@@ -352,6 +352,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 69482916100906734}
     m_Modifications:
+    - target: {fileID: 7509318917139292650, guid: 4acc6ec9b29d94a488854886274241ea,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiMaki
+      objectReference: {fileID: 0}
     - target: {fileID: 4732957754805383058, guid: 4acc6ec9b29d94a488854886274241ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -422,11 +427,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.4166472
       objectReference: {fileID: 0}
-    - target: {fileID: 7509318917139292650, guid: 4acc6ec9b29d94a488854886274241ea,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiMaki
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4acc6ec9b29d94a488854886274241ea, type: 3}
 --- !u!4 &5880431221578659905 stripped
@@ -442,6 +442,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3110721339648347477}
     m_Modifications:
+    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiSushi
+      objectReference: {fileID: 0}
     - target: {fileID: 579146344274799330, guid: 0401f47560830ec46b777228e7066341,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,11 +501,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiSushi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0401f47560830ec46b777228e7066341, type: 3}
@@ -592,6 +592,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 69482916100906734}
     m_Modifications:
+    - target: {fileID: 7509318917139292650, guid: 4acc6ec9b29d94a488854886274241ea,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiMaki
+      objectReference: {fileID: 0}
     - target: {fileID: 4732957754805383058, guid: 4acc6ec9b29d94a488854886274241ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -662,11 +667,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.4166472
       objectReference: {fileID: 0}
-    - target: {fileID: 7509318917139292650, guid: 4acc6ec9b29d94a488854886274241ea,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiMaki
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4acc6ec9b29d94a488854886274241ea, type: 3}
 --- !u!4 &877098205441598491 stripped
@@ -682,6 +682,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 69482916100906734}
     m_Modifications:
+    - target: {fileID: 7509318917139292650, guid: 4acc6ec9b29d94a488854886274241ea,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiMaki
+      objectReference: {fileID: 0}
     - target: {fileID: 4732957754805383058, guid: 4acc6ec9b29d94a488854886274241ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -752,11 +757,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.4166472
       objectReference: {fileID: 0}
-    - target: {fileID: 7509318917139292650, guid: 4acc6ec9b29d94a488854886274241ea,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiMaki
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4acc6ec9b29d94a488854886274241ea, type: 3}
 --- !u!4 &2909449919965661649 stripped
@@ -772,6 +772,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3110721339648347477}
     m_Modifications:
+    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiSushi
+      objectReference: {fileID: 0}
     - target: {fileID: 579146344274799330, guid: 0401f47560830ec46b777228e7066341,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -827,11 +832,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiSushi
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0401f47560830ec46b777228e7066341, type: 3}
 --- !u!4 &9036171337088660331 stripped
@@ -847,6 +847,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3110721339648347477}
     m_Modifications:
+    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiSushi
+      objectReference: {fileID: 0}
     - target: {fileID: 579146344274799330, guid: 0401f47560830ec46b777228e7066341,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -901,11 +906,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501256679075819253, guid: 0401f47560830ec46b777228e7066341,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiSushi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0401f47560830ec46b777228e7066341, type: 3}

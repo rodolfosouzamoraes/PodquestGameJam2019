@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7305094842416605865}
   - component: {fileID: 4817300248302523280}
   - component: {fileID: 4205214730224341529}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Alface
   m_TagString: Lettude
   m_Icon: {fileID: 0}

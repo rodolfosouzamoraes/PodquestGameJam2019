@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 8440554864184110345}
   - component: {fileID: 8432448255809082175}
   - component: {fileID: 5740740534321560862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PratoD
   m_TagString: Prato
   m_Icon: {fileID: 0}
@@ -192,6 +192,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8449963543035461057}
     m_Modifications:
+    - target: {fileID: 3674527563158889997, guid: d42371078340aa14dac72f9c987bcd52,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiSteak
+      objectReference: {fileID: 0}
     - target: {fileID: 4133510219796249300, guid: d42371078340aa14dac72f9c987bcd52,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -247,11 +252,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3674527563158889997, guid: d42371078340aa14dac72f9c987bcd52,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiSteak
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d42371078340aa14dac72f9c987bcd52, type: 3}
 --- !u!4 &1424318877576006099 stripped
@@ -267,6 +267,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8449963543035461057}
     m_Modifications:
+    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
+        type: 3}
+      propertyPath: m_Name
+      value: PosiEgg
+      objectReference: {fileID: 0}
     - target: {fileID: 3100436033852523263, guid: 34ca60fd2b20acb48b2527f4a89c6581,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,11 +326,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3100436033852523256, guid: 34ca60fd2b20acb48b2527f4a89c6581,
-        type: 3}
-      propertyPath: m_Name
-      value: PosiEgg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca60fd2b20acb48b2527f4a89c6581, type: 3}
