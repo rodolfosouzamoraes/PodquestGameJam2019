@@ -19,13 +19,21 @@ public class DragAndDrop : MonoBehaviour
     {
         gm = FindObjectOfType<GameManager>();
         rb = GetComponent<Rigidbody>();
-        colliderOfFoodOnPlate.SetActive(false);
+        ActivedCollider(false);
+    }
+
+    private void ActivedCollider(bool v)
+    {
+        if (colliderOfFoodOnPlate != null)
+        {
+            colliderOfFoodOnPlate.SetActive(v);
+        }
     }
 
     private void OnMouseUp()
     {
         //gm.DisableArrow();
-        colliderOfFoodOnPlate.SetActive(true);
+        ActivedCollider(true);
         rb.useGravity = true;
         isDragging = false; // Quando o jogador solta o mouse, ele não consegue mais arrastar
     }
@@ -43,7 +51,7 @@ public class DragAndDrop : MonoBehaviour
             posY = Input.mousePosition.y - dist.y;
             posZ = Input.mousePosition.z - dist.z;
             gm.PlaySoundEffect(1);
-            colliderOfFoodOnPlate.SetActive(false);
+            ActivedCollider(false);
         }
     }
 
@@ -117,7 +125,7 @@ public class DragAndDrop : MonoBehaviour
         {
             gm.AddTotalHitPerStage();
             gm.PlaySoundEffect(2);
-            colliderOfFoodOnPlate.SetActive(false);
+            ActivedCollider(false);
             Destroy(go);
             Debug.Log("Acertou!");
         }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -181,6 +182,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ReturnCavnasUI();
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 

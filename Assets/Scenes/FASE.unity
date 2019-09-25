@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.413014, g: 0.30501252, b: 0.30170408, a: 1}
+  m_IndirectSpecularColor: {r: 0.41302627, g: 0.30496287, b: 0.3016924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5544,7 +5544,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -10451,21 +10451,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Estagios
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074927506708991295, guid: 5b901f4e83a2fbc4b8fe6216d96b110e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074927506965646832, guid: 5b901f4e83a2fbc4b8fe6216d96b110e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074927507258231743, guid: 5b901f4e83a2fbc4b8fe6216d96b110e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1074927506983024077, guid: 5b901f4e83a2fbc4b8fe6216d96b110e,
         type: 3}
