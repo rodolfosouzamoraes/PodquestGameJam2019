@@ -60,7 +60,8 @@ public class Timer : MonoBehaviour
             audios[0].Play();
             if (cacheTime <= 0)
             {
-                gm.RestartStages();
+                gm.RestartStages("Timer");
+                isActive = false;
             }
         }
     }

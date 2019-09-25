@@ -131,7 +131,7 @@ public class DragAndDrop : MonoBehaviour
     {
         DropDragAndDrop(); // não permite que o jogador pegue o aliemento para não correr o risco dele pegar um alimento diferente depois que errar o anterior.
         Debug.Log("Errou!");
-        gm.RestartStages();
+        gm.RestartStages("DragAndDrop");
     }
 
     private static void DropDragAndDrop()

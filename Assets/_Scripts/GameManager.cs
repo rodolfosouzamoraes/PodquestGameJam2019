@@ -21,12 +21,14 @@ public class GameManager : MonoBehaviour
     bool restart = false;
     float hitMargin = 0.75f; // margem de acerto
     bool isActive;
+    string source;
     void Start()
     {
         timer = FindObjectOfType<Timer>();
         //arrow = GameObject.FindGameObjectWithTag("Seta");
         audioSource = GetComponents<AudioSource>();
         isActive = true;
+        source = "";
         //DisableArrow();
         StartStages();
         StartGameVolume();
@@ -62,9 +64,9 @@ public class GameManager : MonoBehaviour
             posi++;
         }
     }
-    public void RestartStages() // reinicia estagios.
+    public void RestartStages(string origin) // reinicia estagios.
     {
-        timer.PauseTimer();
+        source = origin;
         PlaySoundEffect(3);
         StartCoroutine(DelayRestart());
     }
@@ -93,7 +95,11 @@ public class GameManager : MonoBehaviour
             stages[x] = inGameStage.transform.GetChild(x).gameObject;
         }
 
-        timer.ResetTimer();
+        if (source.Equals("Timer")) // se o game over vier do tempo ele reseta o tempo
+        {
+            source = "";
+            timer.ResetTimer();
+        }
 
         StartStages();
     }
