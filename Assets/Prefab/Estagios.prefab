@@ -1507,6 +1507,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7759588817130304874, guid: e6a828f82a85a8c49b1b15c8d5157f6c,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 5113576087559413312}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a828f82a85a8c49b1b15c8d5157f6c, type: 3}
 --- !u!4 &7268223936791261832 stripped
@@ -6895,6 +6900,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 818619006886594494, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 1469572396583042965}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22, type: 3}
 --- !u!4 &356042991477680195 stripped
@@ -7432,6 +7442,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7759588817130304874, guid: e6a828f82a85a8c49b1b15c8d5157f6c,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 4213630161139988861}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a828f82a85a8c49b1b15c8d5157f6c, type: 3}
 --- !u!4 &6701063557797375310 stripped
@@ -8098,7 +8113,7 @@ PrefabInstance:
     - target: {fileID: 7312220859666135546, guid: b5c8997a3e243644db01985075d4c195,
         type: 3}
       propertyPath: m_Name
-      value: Hamburger (1)
+      value: Hamburger
       objectReference: {fileID: 0}
     - target: {fileID: 7311455857605485962, guid: b5c8997a3e243644db01985075d4c195,
         type: 3}
@@ -8155,6 +8170,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7312077368732362615, guid: b5c8997a3e243644db01985075d4c195,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 3752632340786199316}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c8997a3e243644db01985075d4c195, type: 3}
 --- !u!4 &3693751907240351934 stripped
@@ -8173,7 +8193,7 @@ PrefabInstance:
     - target: {fileID: 3948790764815465461, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22,
         type: 3}
       propertyPath: m_Name
-      value: Maki (1)
+      value: Maki
       objectReference: {fileID: 0}
     - target: {fileID: 3945527362868379347, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22,
         type: 3}
@@ -8230,6 +8250,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 818619006886594494, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 922149603089023932}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22, type: 3}
 --- !u!4 &7848258771346177945 stripped
@@ -8305,6 +8330,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 818619006886594494, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 1469572396583042965}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22, type: 3}
 --- !u!4 &7796057976210627902 stripped
@@ -9135,6 +9165,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7759588817130304874, guid: e6a828f82a85a8c49b1b15c8d5157f6c,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 4213630161139988861}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a828f82a85a8c49b1b15c8d5157f6c, type: 3}
 --- !u!4 &1040081818631992068 stripped
@@ -9676,6 +9711,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 818619006886594494, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22,
+        type: 3}
+      propertyPath: colliderOfFoodOnPlate
+      value: 
+      objectReference: {fileID: 3585110894675278559}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f6f8695e7d3e9c45afecbd8b60c6a22, type: 3}
 --- !u!4 &6423199494050075034 stripped
