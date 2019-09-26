@@ -12,7 +12,8 @@ public class DragAndDrop : MonoBehaviour
     float posX;
     float posZ;
     float posY;
-    bool isDragging = true; //Jogo começa com o jogador conseguindo arrastar e solta
+    bool isDragging = false; 
+    bool isMouseEnable = true;
     bool isCollided = false;
 
     private void Start()
@@ -20,6 +21,18 @@ public class DragAndDrop : MonoBehaviour
         gm = FindObjectOfType<GameManager>();
         rb = GetComponent<Rigidbody>();
         ActivedCollider(false);
+    }
+
+    private void Update()
+    {
+        if (isDragging)
+        {
+            float disX = Input.mousePosition.x - posX;
+            float disY = Input.mousePosition.y - posY;
+            float disZ = Input.mousePosition.z - posZ;
+            Vector3 lastPos = Camera.main.ScreenToWorldPoint(new Vector3(disX, disY, disZ));
+            transform.position = new Vector3(lastPos.x, startPos.y, lastPos.z);
+        }
     }
 
     private void ActivedCollider(bool v)
@@ -33,16 +46,19 @@ public class DragAndDrop : MonoBehaviour
     private void OnMouseUp()
     {
         //gm.DisableArrow();
+        Debug.Log("Mouse Up");
         ActivedCollider(true);
         rb.useGravity = true;
+        rb.velocity = new Vector3(0, -1, 0);
         isDragging = false; // Quando o jogador solta o mouse, ele não consegue mais arrastar
+        isMouseEnable = false;
     }
     void OnMouseDown()
     {
-        
-        if (isDragging)
+        if (isMouseEnable)
         {
-            //gm.ActiveArrow(gameObject);
+            Debug.Log("Mouse Down");
+            isDragging = true;
             rb.useGravity = false;
             transform.position = new Vector3(transform.position.x, transform.position.y + 4.5f, transform.position.z);
             startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -53,18 +69,11 @@ public class DragAndDrop : MonoBehaviour
             gm.PlaySoundEffect(1);
             ActivedCollider(false);
         }
+        
     }
 
     void OnMouseDrag()
     {
-        if (isDragging)
-        {
-            float disX = Input.mousePosition.x - posX;
-            float disY = Input.mousePosition.y - posY;
-            float disZ = Input.mousePosition.z - posZ;
-            Vector3 lastPos = Camera.main.ScreenToWorldPoint(new Vector3(disX, disY, disZ));
-            transform.position = new Vector3(lastPos.x, startPos.y, lastPos.z);
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -75,7 +84,7 @@ public class DragAndDrop : MonoBehaviour
         }
         else if (collision.gameObject.tag.Equals("Tabua"))
         {
-            isDragging = true; // Deixa o jogador pegar o objeto novamente
+            isMouseEnable = true; // Deixa o jogador pegar o objeto novamente
         }
     }
 
