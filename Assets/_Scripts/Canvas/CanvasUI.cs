@@ -33,7 +33,6 @@ public class CanvasUI : MonoBehaviour
     {
         dofModel.focusDistance = new FloatParameter { value = 10f };
         camAnimator.SetBool("PositionCamera", true);
-        gm.StartTimer();
         this.gameObject.SetActive(false);
     }
 

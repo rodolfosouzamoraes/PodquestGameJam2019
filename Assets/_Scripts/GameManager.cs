@@ -242,12 +242,6 @@ public class GameManager : MonoBehaviour
 
     public void StartTimer()
     {
-        StartCoroutine(Timer());
-    }
-
-    IEnumerator Timer()
-    {
-        yield return new WaitForSecondsRealtime(4.3f);
         timer.StartTimer();
     }
 }
