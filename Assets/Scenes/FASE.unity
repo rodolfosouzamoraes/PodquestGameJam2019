@@ -14319,16 +14319,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Estagios
       objectReference: {fileID: 0}
-    - target: {fileID: 1074927505755135915, guid: 5b901f4e83a2fbc4b8fe6216d96b110e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074927507298120112, guid: 5b901f4e83a2fbc4b8fe6216d96b110e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1074927506983024077, guid: 5b901f4e83a2fbc4b8fe6216d96b110e,
         type: 3}
       propertyPath: m_LocalPosition.x
