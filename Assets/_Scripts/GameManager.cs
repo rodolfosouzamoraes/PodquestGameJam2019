@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int[] totalFoodPerPlate; // Posicao 0 = PratoA, 1 = PratoB ...
     [SerializeField] int[] totalHitPerStage;
     [SerializeField] ParticleSystem particleSystem;
-    [SerializeField] Text txtGameOver;
+    [SerializeField] GameObject canvasGameOver;
     AudioSource[] audioSource;
     Timer timer;
     //[HideInInspector]
@@ -25,9 +26,12 @@ public class GameManager : MonoBehaviour
     float hitMargin = 0.75f; // margem de acerto
     bool isActive;
     string source;
+    private DepthOfField dofModel;
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
+        canvasGameOver.SetActive(false);
         //arrow = GameObject.FindGameObjectWithTag("Seta");
         audioSource = GetComponents<AudioSource>();
         isActive = true;
@@ -35,7 +39,7 @@ public class GameManager : MonoBehaviour
         //DisableArrow();
         StartStages();
         StartGameVolume();
-        txtGameOver.enabled = false;
+        
     }
 
     private void StartStages()
@@ -250,7 +254,13 @@ public class GameManager : MonoBehaviour
 
     public void SetGameOver()
     {
-        txtGameOver.enabled = true;
+        DragAndDrop[] foods = FindObjectsOfType<DragAndDrop>();
+        foreach(DragAndDrop food in foods)
+        {
+            Destroy(food);
+        }
+        dofModel.focusDistance = new FloatParameter { value = 3f };
+        canvasGameOver.SetActive(true);
         audioSource[0].Stop();
         audioSource[5].Play();
         StartCoroutine(GameOver());
@@ -259,5 +269,10 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(6f);
         SceneManager.LoadScene(0);
+    }
+
+    public void SetDofModel(DepthOfField dof)
+    {
+        dofModel = dof;
     }
 }
