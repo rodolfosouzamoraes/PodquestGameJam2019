@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int[] totalFoodPerPlate; // Posicao 0 = PratoA, 1 = PratoB ...
     [SerializeField] int[] totalHitPerStage;
     [SerializeField] ParticleSystem particleSystem;
+    [SerializeField] Text txtGameOver;
     AudioSource[] audioSource;
     Timer timer;
     //[HideInInspector]
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         //DisableArrow();
         StartStages();
         StartGameVolume();
+        txtGameOver.enabled = false;
     }
 
     private void StartStages()
@@ -243,5 +246,18 @@ public class GameManager : MonoBehaviour
     public void StartTimer()
     {
         timer.StartTimer();
+    }
+
+    public void SetGameOver()
+    {
+        txtGameOver.enabled = true;
+        audioSource[0].Stop();
+        audioSource[5].Play();
+        StartCoroutine(GameOver());
+    }
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSecondsRealtime(6f);
+        SceneManager.LoadScene(0);
     }
 }
